@@ -20,6 +20,7 @@ app.set("views", "./src/views");
 app.set("view engine", "ejs");
 
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
 
 // Routes
 const newsRouter = require("./src/routes/index");
@@ -55,60 +56,36 @@ app.use('/world', worldNews);
 
 // let search = req.body.search;
 app.route('/pages')
-.post((req, res) =>{
+  .post((req, res) => {
 
 
-  var options = {
-    method: 'GET',
-    url: 'https://newscatcher.p.rapidapi.com/v1/search',
-    params: {q: 'Elon Musk', lang: 'en', sort_by: 'relevancy', page: '1', media: 'True'},
-    headers: {
-      'x-rapidapi-host': 'newscatcher.p.rapidapi.com',
-      'x-rapidapi-key': '478f85a7b5msh8f8921cd90e6026p1ecf9cjsnb299c30b5770'
-    }
-  };
-  
-  axios
-    .request(options)
-    .then(function (response) {
-      // console.log(response.data);
-      res.render("search", { contents: contents });
-  
-    })
-    .catch(function (error) {
-      console.error(error);
-    });
+    var options = {
+      method: 'GET',
+      url: 'https://newscatcher.p.rapidapi.com/v1/search',
+      params: { q: `${req.body.search}`, lang: 'en', sort_by: 'relevancy', page: '1', media: 'True' },
+      headers: {
+        'x-rapidapi-host': 'newscatcher.p.rapidapi.com',
+        'x-rapidapi-key': '478f85a7b5msh8f8921cd90e6026p1ecf9cjsnb299c30b5770'
+      }
+    };
 
-});
+    axios
+      .request(options)
+      .then(function (response) {
+        var contents = response.data.articles;
+        console.log(contents);
+        res.render("search", { contents: contents });
 
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
 
 
-// app.route('/pages')
-// .post((req, res) => {
 
-//     let search = req.body.search;
+  });
 
-//     var options = {
-//         method: 'GET',
-//         url: `https://api.newscatcherapi.com/v2/search?q=${search}`,
-//         params: { lang: 'en', media: 'True' },
-//         headers: {
-//             'x-api-key': 'GrKC0IWB9ne3YNgAo1W7sbngx72SS2OnFTFSOcC5nY8'
-//         }
-//     };
-//     request(options, (error, response, body) => {
-//         if (!error && res.statusCode == 200) { // Successful response
-//             var data = JSON.parse(body);
-//             // var author = data.articles[1].author;
-//             var contents = data.articles;
-        
-//         } else {
-//             console.log(error);
-//         }
-//         res.render('search', { contents: contents })
 
-//     })
-// });
 
 
 // Listen on port 3000->backticks for tempalate strings.

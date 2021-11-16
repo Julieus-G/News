@@ -87,8 +87,7 @@
     <%contents.forEach(function(article, index){%>
     <a href="<%=article.link%>" class="newscard" id="card<%=index%>">
       <img src="<%-article.media%>" alt=""/>
-      <h4><%=article.authors[1]%></h4>
-      <p><%=article.excerpt%></p>
+      <p><%=article.summary%></p>
     </a>
     <%})%>
   </div>

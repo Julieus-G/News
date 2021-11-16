@@ -54,22 +54,6 @@
         <button type="submit"><i class="fa fa-search btn"></i></button>
       </form>
     </div>
-    <!-- <div class="seachbar">
-      <form action="/business" method="POST" class="form1">
-        <input
-          type="text"
-          placeholder="Search for news"
-          name="search"
-          class="search"
-        />
-        <button style="border: 0; cursor: pointer" type="submit">
-          <i
-            style="background: var(--primary); padding: 10px"
-            class="fas fa-search fa-1x"
-          ></i>
-        </button>
-      </form>
-    </div> -->
   </nav>
 </header>
 <div class="newz">
@@ -78,11 +62,11 @@
     <img src="<%-article.media%>" alt="" />
     <h4><%=article.title%></h4>
     <% if (article.summary.length > 200) {%>
-      <p><%=article.summary.substring(0, 200)%> ... </p>
-      <h5>read more</h5>
-   <%} else {%>
-    <p><%=article.summary%></p>
+    <p><%=article.summary.substring(0, 200)%> ...</p>
     <h5>read more</h5>
+    <%} else {%>
+    <p><%=article.summary%></p>
+    <h5 style="color: #43adab">Read more</h5>
     <%}%>
   </a>
   <%})%>
