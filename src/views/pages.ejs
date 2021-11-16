@@ -1,0 +1,91 @@
+<%- include("header") -%>
+<header>
+  <nav>
+    <h2>NEWS</h2>
+    <input type="checkbox" name="" id="chk1" />
+
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/politics">Politics</a></li>
+      <li><a href="/world">World</a></li>
+      <li><a href="/business">Business</a></li>
+      <li><a href="/economics">Economics</a></li>
+      <li>
+        <div class="dropdown">
+          <button class="dropbtn">
+            Others <i class="fas fa-chevron-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="/technology">Technology</a>
+            <a href="/science">Science</a>
+            <a href="/energy">Energy</a>
+            <a href="/food">Food</a>
+            <a href="/entertainment">Entertainment</a>
+            <a href="/travel">Travel</a>
+            <a href="/music">Music</a>
+            <a href="/sport">Sport and Gaming</a>
+          </div>
+        </div>
+      </li>
+      <li>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="https://twitter.com/Julieus_G?t=9pBVaTkpTY1AMoGbCH-D0Q&s=08"
+          ><i class="fa fa-twitter"></i
+        ></a>
+        <a
+          href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=user_system_sheet&utm_content=1zle754"
+          ><i class="fa fa-instagram"></i
+        ></a>
+      </li>
+    </ul>
+    <div class="menu">
+      <label for="chk1">
+        <i class="fa fa-bars"></i>
+      </label>
+    </div>
+    <div class="search-box">
+      <form action="/pages" method="POST" class="form1">
+        <input
+          type="text"
+          name="search"
+          id="srch"
+          placeholder="Search for news"
+        />
+        <button type="submit"><i class="fa fa-search btn"></i></button>
+      </form>
+    </div>
+    <!-- <div class="seachbar">
+      <form action="/business" method="POST" class="form1">
+        <input
+          type="text"
+          placeholder="Search for news"
+          name="search"
+          class="search"
+        />
+        <button style="border: 0; cursor: pointer" type="submit">
+          <i
+            style="background: var(--primary); padding: 10px"
+            class="fas fa-search fa-1x"
+          ></i>
+        </button>
+      </form>
+    </div> -->
+  </nav>
+</header>
+<div class="newz">
+  <%contents.forEach(function(article, index){%>
+  <a href="<%=article.link%>" class="newscard" id="card<%=index%>">
+    <img src="<%-article.media%>" alt="" />
+    <h4><%=article.title%></h4>
+    <% if (article.summary.length > 200) {%>
+      <p><%=article.summary.substring(0, 200)%> ... </p>
+      <h5>read more</h5>
+   <%} else {%>
+    <p><%=article.summary%></p>
+    <h5>read more</h5>
+    <%}%>
+  </a>
+  <%})%>
+</div>
+
+<%- include("footer") -%>

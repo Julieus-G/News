@@ -1,0 +1,38 @@
+:root {
+  --background: rgba(10, 10, 10, 0.445);
+  --dark: #0b0909;
+  --links: #8e0e0a;
+  --light: #fafafa;
+  --border: #a0a1a2;
+  --head: #ef0401;
+  --link-hover: #43adab;
+  --background-color: #585558;
+  --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+  --primary: #ddd;
+}
+footer {
+  border: 2px solid var(--head);
+  margin: 2rem 0;
+  width: auto;
+  height: auto;
+  color: var(--primary);
+  background-color: var(--head);
+  padding: 2rem 0;
+  font-size: smaller;
+}
+hr{
+    align-self: center;
+    width: 90%;
+}
+.f-para{
+    border-top: 0.2px solid var(--border);
+    border-bottom: 0.2px solid var(--border);
+    padding: 2em 2em;
+}
+footer p:nth-child(2){
+    margin: 2rem 0;
+}
+footer ul li a:hover {
+    border-bottom: 2px solid var(--links);
+    color: var(--links);
+  }

@@ -1,0 +1,52 @@
+:root {
+  --background: rgba(10, 10, 10, 0.445);
+  --dark: #0b0909;
+  --links: #8e0e0a;
+  --light: #fafafa;
+  --border: #a0a1a2;
+  --head: #ef0401;
+  --link-hover: #43adab;
+  --background-color: #585558;
+  --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+  --primary: #ddd;
+}
+.content3 {
+  width: 100%;
+  height: auto;
+  background: url("/images/flipboard-9-QUC4fm8Lo-unsplash(2).jpg");
+  background-size: 100% 100%;
+}
+.content3-div {
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+    position: relative;
+}
+.majordiv2{
+    text-align: start;
+
+}
+.minordiv2{
+    width: 43%;
+    height: 100%;
+    color: var(--primary);
+    padding: 3rem 3rem 3rem 2rem;
+    background: var(--background);
+  }
+.divtwo-2 {
+  width: 100%;
+  margin: 0 10px 10px 10px;
+  padding:  10px 10px 0 0;
+  position: relative;
+}
+.divtwo-p-2{
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+  padding: 0 30px 80px 30px;
+} 
+.copyright{
+  padding-top: 1em;
+  text-align: center;
+}

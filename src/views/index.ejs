@@ -1,0 +1,322 @@
+<%- include("header") -%>
+<div class="container">
+  <header>
+    <!-- <ul>
+          <li><h2>Uasin Gishu</h2></li>
+          <li class="logo">
+            <h2>
+              <img width="40px" height="40px" src="./images/logo.png" alt="" />
+              News
+            </h2>
+          </li>
+          <li><h2>Wednesday 20th October, 2021</h2></li>
+        </ul> -->
+
+    <nav>
+      <!-- <img width="40px" height="40px" src="./images/logo.png" alt="" /> -->
+      <h2>NEWS</h2>
+      <input type="checkbox" name="" id="chk1" />
+      <!-- <div class="logo"><h1></h1></div> -->
+
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/politics">Politics</a></li>
+        <li><a href="/world">World</a></li>
+        <li><a href="/business">Business</a></li>
+        <li><a href="/economics">Economics</a></li>
+        <li>
+          <div class="dropdown">
+            <button class="dropbtn">
+              Others <i class="fas fa-chevron-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="/technology">Technology</a>
+              <a href="/science">Science</a>
+              <a href="/energy">Energy</a>
+              <a href="/food">Food</a>
+              <a href="/entertainment">Entertainment</a>
+              <a href="/travel">Travel</a>
+              <a href="/music">Music</a>
+              <a href="/sport">Sport and Gaming</a>
+            </div>
+          </div>
+        </li>
+        <!-- <li><a href="#"></a>Others</li> -->
+        <li>
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="https://twitter.com/Julieus_G?t=9pBVaTkpTY1AMoGbCH-D0Q&s=08"
+            ><i class="fa fa-twitter"></i
+          ></a>
+          <a
+            href="https://www.instagram.com/invites/contact/?utm_source=ig_contact_invite&utm_medium=user_system_sheet&utm_content=1zle754"
+            ><i class="fa fa-instagram"></i
+          ></a>
+        </li>
+      </ul>
+      <div class="menu">
+        <label for="chk1">
+          <i class="fa fa-bars"></i>
+        </label>
+      </div>
+      <div class="search-box">
+        <form action="/pages" method="POST" class="form1">
+          <input type="text" name="search" id="srch" placeholder="Search for news" />
+          <button type="submit"><i class="fa fa-search btn"></i></button>
+        </form>
+      </div>
+      <!-- <div class="seachbar">
+        <form action="/business" method="POST" class="form1">
+          <input
+            type="text"
+            placeholder="Search for news"
+            name="search"
+            class="search"
+          />
+          <button style="border: 0; cursor: pointer" type="submit">
+            <i
+              style="background: var(--primary); padding: 10px"
+              class="fas fa-search fa-1x"
+            ></i>
+          </button>
+        </form>
+      </div> -->
+     
+    </nav>
+  </header>
+
+  <!-- section  -->
+
+  <section class="showcase">
+    <div class="majordiv">
+      <div class="outer">
+        <p>
+          <%= name %>
+          Many people Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Esse voluptates consequuntur cumque voluptatibus velit, sit aut eaque
+          vel nulla! Rem quo omnis, quis eligendi porro aspernatur ad esse est
+          aliquam.
+        </p>
+        <p>
+          Many people Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Esse voluptates consequuntur cumque voluptatibus velit, sit aut eaque
+          vel nulla! Rem quo omnis, quis eligendi porro aspernatur ad esse est
+          aliquam.
+        </p>
+        <p>
+          Many people Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Esse voluptates consequuntur cumque voluptatibus velit, sit aut eaque
+          vel nulla! Rem quo omnis, quis eligendi porro aspernatur ad esse est
+          aliquam.
+        </p>
+      </div>
+
+      <br />
+      <br />
+      <br />
+      <div class="inner">
+        <h3 class="breaking">Breaking news</h3>
+        <div class="breaking-articles">
+          <p>
+            Many people Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Esse
+          </p>
+          <p>
+            Many people Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Esse
+          </p>
+          <p>
+            Many people Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Esse
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="minordiv">
+      <p>
+        Few people Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
+        obcaecati.
+      </p>
+      <p>
+        Few people Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
+        obcaecati.
+      </p>
+      <p>
+        Few people Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
+        obcaecati.
+      </p>
+      <p>
+        Few people Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
+        obcaecati.
+      </p>
+      <p>
+        Few people Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
+        obcaecati.
+      </p>
+      <p>
+        Few people Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
+        obcaecati.
+      </p>
+      <p>
+        Few people Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
+        obcaecati.
+      </p>
+    </div>
+  </section>
+</div>
+
+<!-- section 2 -->
+
+<div class="subsection">
+  <div class="divone">
+    <p class="content">
+      <!-- <h4><i class="fas fa-circle circle fa-0.5x"></i>Hot topic</h4> -->
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure quod nemo
+      mollitia neque, consectetur iste. Similique sequi neque modi nulla!
+    </p>
+    <p class="content">
+      <!-- <h4><i class="fas fa-circle circle"></i>Hot topic</h4> -->
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure quod nemo
+      mollitia neque, consectetur iste. Similique sequi neque modi nulla!
+    </p>
+    <p class="content">
+      <!-- <h4><i class="fas fa-circle circle"></i>Hot topic</h4> -->
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure quod nemo
+      mollitia neque, consectetur iste. Similique sequi neque modi nulla!
+      lorem20
+    </p>
+    <p class="content">
+      <!-- <h4><i class="fas fa-circle circle"></i> Hot topic</h4> -->
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure quod nemo
+      mollitia neque, consectetur iste. Similique sequi neque modi nulla!
+    </p>
+    <p class="content">
+      <!-- <h4><i class="fas fa-circle circle"></i> Hot topic</h4> -->
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure quod nemo
+      mollitia neque, consectetur iste. Similique sequi neque modi nulla!
+    </p>
+  </div>
+  <div class="divtwo">
+    <h2 style="padding-left: 20px">Ongata Rongai, Nairobi</h2>
+    <div class="divtwo-p">
+      <p>
+        <!-- <h4><i class="fas fa-circle circle"></i>Hot topic</h4> -->
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas,
+        explicabo in neque repudiandae suscipit quasi. Sint similique unde
+        distinctio exercitationem mollitia voluptate repellat alias facilis quae
+        vel dolorum, quaerat officiis <br />
+        <a class="links" href="#">Read more</a>
+      </p>
+    </div>
+  </div>
+  <div class="divthree">
+    <div class="small-nav">
+      <ul>
+        <li><a>Hot topics</a></li>
+        <li><a>Top headlines</a></li>
+        <li><a>Popular</a></li>
+      </ul>
+    </div>
+    <div class="content-image content">
+      <img src="https://source.unsplash.com/random/81x80" alt="" />
+
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure quod nemo
+        mollitia neque, consectetur iste. Similique sequi neque modi
+        <a class="links" href="#">Read more</a>
+      </p>
+    </div>
+    <div class="content-image content">
+      <img src="https://source.unsplash.com/random/80x81" alt="" />
+
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure quod nemo
+        mollitia neque, consectetur iste. Similique sequi neque modi
+        <a class="links" href="#">Read more</a>
+      </p>
+    </div>
+    <div class="content-image content">
+      <img src="https://source.unsplash.com/random/79x80" alt="" />
+
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure quod nemo
+        mollitia neque, consectetur iste. Similique sequi neque modi nulla!
+        <a class="links" href="#">Read more</a>
+      </p>
+    </div>
+    <div class="content-image content">
+      <img src="https://source.unsplash.com/random/80x79" alt="" />
+
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure quod nemo
+        mollitia neque, consectetur iste. Similique sequi neque modi nulla!
+        <a class="links" href="#">Read more</a>
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Section 3 -->
+
+<section class="content2">
+  <fieldset class="content2-p">
+    <legend><h2>Quotes and Mentions</h2></legend>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat assumenda
+      hic facilis adipisci animi fuga at inventore nobis voluptas architecto?
+      Sapiente!
+    </p>
+  </fieldset>
+</section>
+
+<!-- section 4 -->
+
+<section class="content3">
+  <div class="content3-div">
+    <div class="divtwo-2">
+      <!-- <h2>Ongata Rongai, Nairobi</h2> -->
+      <div class="divtwo-p-2 majordiv2">
+        <p>
+          <!-- <h4><i class="fas fa-circle circle"></i>Environment</h4> -->
+          <br />
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas,
+          explicabo in neque repudiandae suscipit quasi. Sint similique unde
+          distinctio exercitationem mollitia voluptate repellat alias facilis
+          quae vel dolorum, quaerat officiis <br /><a class="links" href="#"
+            >Read more</a
+          >
+        </p>
+      </div>
+    </div>
+    <div class="minordiv2">
+      <h3 class="content" style="font-size: 12px">LONG STORY SHORT</h3>
+      <ul class="content">
+        <li>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+            magnam molestiae aliquam suscipit cupiditate amet repudiandae,
+            facere earum omnis voluptatibus.
+          </p>
+        </li>
+        <br />
+        <li>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+            magnam molestiae aliquam suscipit cupiditate amet repudiandae,
+            facere earum omnis voluptatibus.
+          </p>
+        </li>
+        <br />
+        <li style="margin-bottom: 1rem">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+            magnam molestiae aliquam suscipit cupiditate amet repudiandae,
+            facere earum omnis voluptatibus.
+          </p>
+          <a style="padding-left: 0" class="links" href="#">READ MORE</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<%- include("footer") -%>

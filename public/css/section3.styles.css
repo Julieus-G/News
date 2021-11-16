@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+/* CSS variables */
+:root {
+  --background: rgba(10, 10, 10, 0.445);
+  --dark: #0b0909;
+  --links: #8e0e0a;
+  --light: #fafafa;
+  --border: #a0a1a2;
+  --head: #ef0401;
+  --link-hover: #43adab;
+  --background-color: #585558;
+  --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+  --primary: #ddd;
+}
+
+.content2 {
+  width: 80%;
+  margin: 20px auto;
+  height: auto;
+  padding: 10px;
+  align-items: center;
+}
+section fieldset p{
+    font-size: 36px;
+}
+fieldset{
+    border: 8px solid var(--head);
+    padding: 20px;
+
+}
+legend{
+    /* width: 15.4rem; */
+    width: auto;
+    padding: 0 4px;
+    margin-left: calc(48% - 69px - 38px);
+}

@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial;
+}
+/* CSS variables */
+:root {
+  --background: rgba(10, 10, 10, 0.445);
+  --dark: #0b0909;
+  --links: #8e0e0a;
+  --light: #fafafa;
+  --border: #a0a1a2;
+  --head: #ef0401;
+  --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+  --showcase-background: rgba(39, 38, 38, 0.137);
+}
+/* body */
+.container {
+  background: url("/images/absolutvision-bSlHKWxxXak-unsplash(2).jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin-bottom: 2rem;
+}
+.showcase{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10rem 7rem 0 5rem;
+    height: auto;
+}
+.majordiv{
+    position:relative; 
+    height: auto;
+    margin-right: auto;
+    color: var(--dark);
+    padding: 2rem;
+    background: var(--showcase-background);
+    margin-right: 2px;
+}
+.minordiv{
+    color: var(--links);
+    padding: 2rem;
+    height: 300px;
+    overflow-y: scroll;
+    background: var(--showcase-background);
+
+}
+/* Customizing Scrollbar*/
+.minordiv::-webkit-scrollbar {
+  width: 5px;
+}
+.minordiv::-webkit-scrollbar-track {
+  border-radius: 10px;
+}
+.minordiv::-webkit-scrollbar-thumb {
+  background: var(--head);
+  border-radius: 10px;
+}
+.outer{
+  margin-bottom: 3rem;
+  height: auto;
+}
+.inner{
+    display: block;
+    position:absolute;
+    width: auto;
+    height: auto;
+    margin-right: 3rem;
+    bottom: 0;
+    border-bottom: 10px solid var(--dark);
+    padding-top: 10px;
+    margin-bottom: -10px;
+
+  }
+  .breaking{
+    padding: 8px 12px;
+    font-size: 12px;
+    width: 7rem;
+    background-color: var(--head);
+    color: var(--light);
+  }
+  .inner p{
+    background-color: var(--light);
+  }
+  .breaking-articles{
+    display: flex;
+    justify-content: space-between;
+  }
