@@ -64,23 +64,19 @@
           <button type="submit"><i class="fa fa-search btn"></i></button>
         </form>
       </div>
-      <!-- <div class="seachbar">
-        <form action="/business" method="POST" class="form1">
-          <input
-            type="text"
-            placeholder="Search for news"
-            name="search"
-            class="search"
-          />
-          <button style="border: 0; cursor: pointer" type="submit">
-            <i
-              style="background: var(--primary); padding: 10px"
-              class="fas fa-search fa-1x"
-            ></i>
-          </button>
-        </form>
-      </div> -->
-     
+      <div class="credentials">
+        <div class="profile">
+          <input type="file" class="my_file" onmouseover="dropToggle()" onmouseout="dropTooggle()">
+        </div>
+        <div class="drop">
+          <h2>Name</h2>
+          <ul class="logs">
+            <li><i class="fas fa-sign-in-alt"></i><a href="#">Sign in</a></li>
+            <li><i class="fas fa-sign-out-alt"></i><a href="#">Sign out</a></li>
+            <li><i class="far fa-star"></i><a href="#">Favourites</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
   </header>
 
@@ -318,5 +314,7 @@
     </div>
   </div>
 </section>
+
+<script src="/js/prof.js"></script>
 
 <%- include("footer") -%>
