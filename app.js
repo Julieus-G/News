@@ -80,12 +80,21 @@ app.route('/pages')
       .catch(function (error) {
         console.error(error);
       });
-
-
-
   });
 
 
+
+app.get("/login", (req, res) => {
+  res.render("login");
+});
+
+app.get("/register", (req, res) => {
+  res.render("register");
+});
+
+app.get("/favourites", (req, res) => {
+  res.render("register");
+});
 
 
 // Listen on port 3000->backticks for tempalate strings.
