@@ -3,7 +3,6 @@ const businessNews = express.Router();
 var axios = require("axios").default;
 const request = require("request");
 
-
 businessNews.get("", (req, res) => {
 
 
@@ -17,6 +16,7 @@ businessNews.get("", (req, res) => {
       "x-rapidapi-key": "478f85a7b5msh8f8921cd90e6026p1ecf9cjsnb299c30b5770",
     },
   };
+
 
   axios
     .request(options)
