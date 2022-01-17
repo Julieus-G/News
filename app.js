@@ -8,7 +8,20 @@ const async = require("async");
 
 const app = express();
 const port = process.env.PORT || 3000;
+// const firebase = require('firebase/app');
+const { initializeApp } = require("firebase/app");
 
+const firebaseConfig = {
+  apiKey: "AIzaSyC6Y2pKv2B6OpLeJZEB3EHzxPDBQcsy6o4",
+  authDomain: "news-b8a71.firebaseapp.com",
+  projectId: "news-b8a71",
+  storageBucket: "news-b8a71.appspot.com",
+  messagingSenderId: "293366423347",
+  appId: "1:293366423347:web:8bcce449c26775301ba846"
+};
+
+
+initializeApp(firebaseConfig); // Initialize Firebase
 // Allow use of the static Files
 app.use(express.static("public"));
 app.use("/css", express.static(__dirname + "public/css"));
@@ -37,7 +50,9 @@ const scienceNews = require("./src/routes/science");
 const sportNews = require("./src/routes/sport");
 const travelNews = require("./src/routes/travel");
 const worldNews = require("./src/routes/world");
-const { search } = require("./src/routes/index");
+// const { search } = require("./src/routes/index");
+const loginRouter = require("./src/routes/login");
+const registerRouter = require("./src/routes/register");
 
 app.use("/", newsRouter);
 app.use('/business', businessNews);
@@ -52,6 +67,8 @@ app.use('/science', scienceNews);
 app.use('/sport', sportNews);
 app.use('/travel', travelNews);
 app.use('/world', worldNews);
+app.use('/login', loginRouter);
+app.use("/register", registerRouter)
 // Search functionality in the business.ejs page
 
 // let search = req.body.search;
