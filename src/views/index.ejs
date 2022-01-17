@@ -86,28 +86,23 @@
     <div class="majordiv">
       <div class="outer">
         <p>
-          <%= name %>
-          Many people Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Esse voluptates consequuntur cumque voluptatibus velit, sit aut eaque
-          vel nulla! Rem quo omnis, quis eligendi porro aspernatur ad esse est
-          aliquam.
+          <%= firstSummary %>
+          <a class="links" href="<%-firstLink%>">Read more</a>
         </p>
+        <br>
         <p>
-          Many people Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Esse voluptates consequuntur cumque voluptatibus velit, sit aut eaque
-          vel nulla! Rem quo omnis, quis eligendi porro aspernatur ad esse est
-          aliquam.
+          <%= secondSummary %>
+          <a class="links" href="<%-secondLink%>">Read more</a>
         </p>
+        <br>
         <p>
-          Many people Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Esse voluptates consequuntur cumque voluptatibus velit, sit aut eaque
-          vel nulla! Rem quo omnis, quis eligendi porro aspernatur ad esse est
-          aliquam.
+          <%= thirdSummary %>
+          <a class="links" href="<%-thirdLink%>">Read more</a>
         </p>
       </div>
 
       <br />
-      <br />
+      <!-- <br /> -->
       <br />
       <div class="inner">
         <h3 class="breaking">Breaking news</h3>
@@ -129,33 +124,41 @@
     </div>
     <div class="minordiv">
       <p>
-        Few people Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
-        obcaecati.
+        <%= firstTitle %>
+        <a class="links" href="<%-fourthLink%>">Read more</a>
       </p>
+    </br>
       <p>
-        Few people Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
-        obcaecati.
+        <%= secondTitle %>
+        <a class="links" href="<%-fifthLink%>">Read more</a>
       </p>
-      <p>
-        Few people Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
-        obcaecati.
+    </br>
+          <p>
+        <%= thirdTitle %>
+        <a class="links" href="<%-sixthLink%>">Read more</a>
       </p>
-      <p>
-        Few people Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
-        obcaecati.
+    </br>
+          <p>
+        <%= fourthTitle %>
+        <a class="links" href="<%-seventhLink%>">Read more</a>
       </p>
-      <p>
-        Few people Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
-        obcaecati.
+    </br>
+          <p>
+        <%= fifthTitle %>
+        <a class="links" href="<%-eighthLink%>">Read more</a>
       </p>
-      <p>
-        Few people Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
-        obcaecati.
+    </br>
+          <p>
+        <%= sixthTitle %>
+        <a class="links" href="<%-ninthLink%>">Read more</a>
       </p>
-      <p>
-        Few people Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea,
-        obcaecati.
+    </br>
+          <p>
+        <%= seventhTitle %>
+        <a class="links" href="<%-tenthLink%>">Read more</a>
       </p>
+    </br>
+    
     </div>
   </section>
 </div>
@@ -165,41 +168,38 @@
 <div class="subsection">
   <div class="divone">
     <p class="content">
-      <!-- <h4><i class="fas fa-circle circle fa-0.5x"></i>Hot topic</h4> -->
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure quod nemo
-      mollitia neque, consectetur iste. Similique sequi neque modi nulla!
+      <h4><i class="fas fa-circle circle fa-5x"></i>Hot topic</h4>
+      <%= fourthSummary %>
+      <a class="links" href="<%-eleventhLink%>">Read more</a>
     </p>
     <p class="content">
-      <!-- <h4><i class="fas fa-circle circle"></i>Hot topic</h4> -->
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure quod nemo
-      mollitia neque, consectetur iste. Similique sequi neque modi nulla!
+      <h4><i class="fas fa-circle circle"></i>Hot topic</h4>
+      <%= fifthSummary %>
+      <a class="links" href="<%-twelfthLink%>">Read more</a>
     </p>
     <p class="content">
-      <!-- <h4><i class="fas fa-circle circle"></i>Hot topic</h4> -->
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure quod nemo
-      mollitia neque, consectetur iste. Similique sequi neque modi nulla!
-      lorem20
+      <h4><i class="fas fa-circle circle"></i>Hot topic</h4>
+      <%= sixthSummary %>
+      <a class="links" href="<%-thirteenthLink%>">Read more</a>
     </p>
     <p class="content">
-      <!-- <h4><i class="fas fa-circle circle"></i> Hot topic</h4> -->
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure quod nemo
-      mollitia neque, consectetur iste. Similique sequi neque modi nulla!
+      <h4><i class="fas fa-circle circle"></i> Hot topic</h4>
+      <%= seventhSummary %>
+      <a class="links" href="<%-fourteenthLink%>">Read more</a>
     </p>
     <p class="content">
-      <!-- <h4><i class="fas fa-circle circle"></i> Hot topic</h4> -->
-      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure quod nemo
-      mollitia neque, consectetur iste. Similique sequi neque modi nulla!
+      <h4><i class="fas fa-circle circle"></i> Hot topic</h4>
+      <%= eighthSummary %>
+      <a class="links" href="<%-fifteenthLink%>">Read more</a>
     </p>
   </div>
-  <div class="divtwo">
-    <h2 style="padding-left: 20px">Ongata Rongai, Nairobi</h2>
+  <div class="divtwo" style="background: url('https://source.unsplash.com/random/550x600'); background-repeat: no-repeat; background-size: 100% 100%;">
+    <h2 style="padding-left: 30px; padding-top: 50px;"><%= country %></h2>
     <div class="divtwo-p">
       <p>
-        <!-- <h4><i class="fas fa-circle circle"></i>Hot topic</h4> -->
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas,
-        explicabo in neque repudiandae suscipit quasi. Sint similique unde
-        distinctio exercitationem mollitia voluptate repellat alias facilis quae
-        vel dolorum, quaerat officiis <br />
+        <h4><i class="fas fa-circle circle"></i>Hot topic</h4>
+        <%= ninthSummary %>
+        <br />
         <a class="links" href="#">Read more</a>
       </p>
     </div>

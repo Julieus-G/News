@@ -36,6 +36,7 @@
     padding: 2rem;
     background: var(--showcase-background);
     margin-right: 2px;
+    width: 100%;
 }
 .minordiv{
     color: var(--links);
@@ -43,6 +44,7 @@
     height: 300px;
     overflow-y: scroll;
     background: var(--showcase-background);
+    width: 32%;
 
 }
 /* Customizing Scrollbar*/
