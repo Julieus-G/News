@@ -216,14 +216,8 @@ nav .menu {
   margin: 20px;
   overflow: hidden;
 }
-<<<<<<< HEAD
-
-.my_file {
-  position: absolute;
-=======
 .my_file{
   /* position: absolute; */
->>>>>>> 0af9826b4db724c1a8e0839a11b169b5695811fb
   bottom: 0;
   top: 0;
   outline: none;
