@@ -2,12 +2,25 @@ const express = require("express");
 const newsRouter = express.Router();
 var axios = require("axios").default;
 const request = require("request");
+let quote = "";
+let quoteAuthor = "";
+
+function fetchQuote() {
+  axios.request("https://api.quotable.io/random")
+    .then((response) => {
+      quote = response.data.content;
+      quoteAuthor = response.data.author
+    }).catch((e) => console.log(e));
+
+}
 
 newsRouter.get("", (req, res) => {
+
 
   // setting request 'options' parameter
 
   ///////////////////////////////
+
 
   var options = {
     method: 'GET',
@@ -18,11 +31,12 @@ newsRouter.get("", (req, res) => {
     }
   };
 
+  fetchQuote();
 
   axios
     .request(options)
     .then(function (response) {
-      console.log(response.data.articles[16]);
+      // console.log(response.data.articles[22]);
 
       //showcase- majordiv
 
@@ -70,19 +84,46 @@ newsRouter.get("", (req, res) => {
       let firstMedia = response.data.articles[16].media;
       let ninthSummary = response.data.articles[16].summary;
 
+      //subsection - divthree
 
+      let tenthSummary = response.data.articles[17].summary;
+      let sixteenthLink = response.data.articles[17].link;
+      let eleventhSummary = response.data.articles[18].summary;
+      let seventeenthLink = response.data.articles[18].link;
+      let twelfthSummary = response.data.articles[19].summary;
+      let eighteenthLink = response.data.articles[19].link;
+      let thirteenthSummary = response.data.articles[20].summary;
+      let ninteenthLink = response.data.articles[20].link;
+      let fourteenthSummary = response.data.articles[21].summary;
+      let twentiethLink = response.data.articles[21].link;
+
+
+///
+      
+      let fifteenthSummary = response.data.articles[22].summary;
+      let twentyfirstLink = response.data.articles[22].link;
+      let firstTopic = response.data.articles[22].topic;
+
+
+      ///
+
+      let sixteenthSummary = response.data.articles[23].summary;
+      let twentysecondLink = response.data.articles[23].link;
 
       //Rendering the home page
 
       res.render("index", {
-        firstSummary: firstSummary, firstLink: firstLink, secondSummary: secondSummary, secondLink: secondLink, thirdSummary: thirdSummary, thirdLink: thirdLink, firstTitle: firstTitle, fourthLink: fourthLink, secondTitle: secondTitle, fifthLink: fifthLink, thirdTitle: thirdTitle, sixthLink: sixthLink, fourthTitle: fourthTitle, seventhLink: seventhLink, fifthTitle: fifthTitle, eighthLink: eighthLink, sixthTitle: sixthTitle, ninthLink: ninthLink, seventhTitle: seventhTitle, tenthLink: tenthLink, fourthSummary: fourthSummary, eleventhLink: eleventhLink, fifthSummary: fifthSummary, twelfthLink: twelfthLink, sixthSummary: sixthSummary, thirteenthLink: thirteenthLink, seventhSummary: seventhSummary, fourteenthLink: fourteenthLink, eighthSummary: eighthSummary, fifteenthLink: fifteenthLink, country: country, firstMedia: firstMedia, ninthSummary: ninthSummary
+        firstSummary, firstLink, secondSummary, secondLink, thirdSummary, thirdLink, firstTitle, fourthLink, secondTitle, fifthLink, thirdTitle, sixthLink, fourthTitle, seventhLink, fifthTitle, eighthLink, sixthTitle, ninthLink, seventhTitle, tenthLink, fourthSummary, eleventhLink, fifthSummary,  twelfthLink, sixthSummary, thirteenthLink, seventhSummary, fourteenthLink,  eighthSummary, fifteenthLink, country,firstMedia, ninthSummary, tenthSummary, sixteenthLink,  eleventhSummary, seventeenthLink, twelfthSummary, eighteenthLink, thirteenthSummary, ninteenthLink, fourteenthSummary, twentiethLink, quote, quoteAuthor, fifteenthSummary, twentyfirstLink, firstTopic, sixteenthSummary, twentysecondLink
       });
     })
 
     .catch(function (error) {
       console.error(error);
     });
+
+
 })
 
-
 module.exports = newsRouter;
+
+

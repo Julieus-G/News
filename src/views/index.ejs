@@ -1,5 +1,5 @@
 <%- include("header") -%>
-<div class="container">
+<div class="mainContainer">
   <header>
     <!-- <ul>
           <li><h2>Uasin Gishu</h2></li>
@@ -12,7 +12,7 @@
           <li><h2>Wednesday 20th October, 2021</h2></li>
         </ul> -->
 
-    <nav>
+    <nav class="navbar">
       <!-- <img width="40px" height="40px" src="./images/logo.png" alt="" /> -->
       <h2>NEWS</h2>
       <input type="checkbox" name="" id="chk1" />
@@ -180,7 +180,7 @@
 <div class="subsection">
   <div class="divone">
     <p class="content">
-      <h4><i class="fas fa-circle circle fa-5x"></i>Hot topic</h4>
+      <h4><i class="fas fa-circle circle"></i>Hot topic</h4>
       <%= fourthSummary %>
       <a class="links" href="<%-eleventhLink%>">Read more</a>
     </p>
@@ -228,36 +228,40 @@
       <img src="https://source.unsplash.com/random/81x80" alt="" />
 
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure quod nemo
-        mollitia neque, consectetur iste. Similique sequi neque modi
-        <a class="links" href="#">Read more</a>
+        <%= tenthSummary %>
+        <a class="links" href="<%-sixteenthLink%>">Read more</a>
       </p>
     </div>
     <div class="content-image content">
       <img src="https://source.unsplash.com/random/80x81" alt="" />
 
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure quod nemo
-        mollitia neque, consectetur iste. Similique sequi neque modi
-        <a class="links" href="#">Read more</a>
+        <%= eleventhSummary %>
+        <a class="links" href="<%-seventeenthLink%>">Read more</a>
       </p>
     </div>
     <div class="content-image content">
       <img src="https://source.unsplash.com/random/79x80" alt="" />
 
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure quod nemo
-        mollitia neque, consectetur iste. Similique sequi neque modi nulla!
-        <a class="links" href="#">Read more</a>
+        <%= twelfthSummary %>
+        <a class="links" href="<%-eighteenthLink%>">Read more</a>
       </p>
     </div>
     <div class="content-image content">
       <img src="https://source.unsplash.com/random/80x79" alt="" />
 
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure quod nemo
-        mollitia neque, consectetur iste. Similique sequi neque modi nulla!
-        <a class="links" href="#">Read more</a>
+        <%= thirteenthSummary %>
+        <a class="links" href="<%-ninteenthLink%>">Read more</a>
+      </p>
+    </div>
+    <div class="content-image content">
+      <img src="https://source.unsplash.com/random/80x79" alt="" />
+
+      <p>
+        <%= fourteenthSummary %>
+        <a class="links" href="<%-twentiethLink%>">Read more</a>
       </p>
     </div>
   </div>
@@ -268,10 +272,13 @@
 <section class="content2">
   <fieldset class="content2-p">
     <legend><h2>Quotes and Mentions</h2></legend>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat assumenda
-      hic facilis adipisci animi fuga at inventore nobis voluptas architecto?
-      Sapiente!
+    <p style="text-align: center;">
+    
+     <%= quote %> 
+     <div style="text-align: center; color: black; font-weight: bold; font-style: italic; font-size: 1.3rem; margin-top: 10px;">
+      - <%= quoteAuthor %>
+     </div>
+     
     </p>
   </fieldset>
 </section>
@@ -284,14 +291,11 @@
       <!-- <h2>Ongata Rongai, Nairobi</h2> -->
       <div class="divtwo-p-2 majordiv2">
         <p>
-          <!-- <h4><i class="fas fa-circle circle"></i>Environment</h4> -->
+          <h4><i class="fas fa-circle circle"></i><%= firstTopic %></h4>
           <br />
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptas,
-          explicabo in neque repudiandae suscipit quasi. Sint similique unde
-          distinctio exercitationem mollitia voluptate repellat alias facilis
-          quae vel dolorum, quaerat officiis <br /><a class="links" href="#"
-            >Read more</a
-          >
+                  <%= fifteenthSummary %>
+          <br/>
+          <a class="links" href="<%-twentyfirstLink%>">Read more</a>
         </p>
       </div>
     </div>
@@ -316,11 +320,9 @@
         <br />
         <li style="margin-bottom: 1rem">
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-            magnam molestiae aliquam suscipit cupiditate amet repudiandae,
-            facere earum omnis voluptatibus.
+            <%= sixteenthSummary %>
           </p>
-          <a style="padding-left: 0" class="links" href="#">READ MORE</a>
+          <a style="padding-left: 0" class="links" href="<%- twentysecondLink %>">READ MORE</a>
         </li>
       </ul>
     </div>

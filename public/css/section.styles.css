@@ -16,7 +16,7 @@
   --showcase-background: rgba(39, 38, 38, 0.137);
 }
 /* body */
-.container {
+.mainContainer {
   background: url("/images/absolutvision-bSlHKWxxXak-unsplash(2).jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
