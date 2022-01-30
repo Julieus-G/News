@@ -16,15 +16,15 @@
             </div>
             <div class="form-group">
               <label for="password">Password</label>
-              <input type="password" class="form-control" name="password">
+              <input type="password" class="form-control" name="password" required>
             </div>
             <div class="form-group">
               <label for="passwordConfirm">Confirm Password</label>
-              <input type="password" class="form-control" name="passwordConfirm">
+              <input type="password" class="form-control" name="passwordConfirm" required>
             </div>
             <!-- Alert Div -->
 
-            <div class="alert alert-danger" role="alert" id="alert1-div" style="display: <%-display%>;">
+            <div class="alert alert-danger" role="alert" id="alert1-div" style="display: <%- display %>;">
             <strong>Error! <%=error  %> </div>
             <button type="submit" class="btn btn-dark">Register</button>
           </form>

@@ -70,11 +70,21 @@
                 <input type="file" class="my_file">
               </div>
             </button>
-            <div class="dropdown-content">
+            <!-- Check is user is loggedIn -->
+            <% if (useruid) { %>
+             <div class="dropdown-content">
+              <i class="fas fa-sign-in-alt"></i><a href="/signout">Sign Out</a>
+              <i class="far fa-star"></i><a href="/register">Favourites</a>
+
+             </div>
+            <% } else { %>
+              <div class="dropdown-content">
               <i class="fas fa-sign-in-alt"></i><a href="/login">Sign in</a>
               <i class="fas fa-sign-up-alt"></i><a href="/register">Sign up</a>
               <i class="far fa-star"></i><a href="/register">Favourites</a>
             </div>
+            <% } %>
+            
           </div>
       <!-- <div class="credentials">
         <div class="profile">
