@@ -7,7 +7,7 @@ const loginRouter = express.Router();
 
 
 loginRouter.get('', (req, res) => {
-    console.log("Login page rendered");
+    // console.log("Login page rendered");
     res.render('login', {
         error: "",
         display: "none"
@@ -16,7 +16,7 @@ loginRouter.get('', (req, res) => {
 
 loginRouter.post("", (req, res) => {
     const { email, password } = req.body;
-    console.log(email, password);
+    // console.log(email, password);
     const auth = getAuth();
     signInWithEmailAndPassword(auth, email, password).then(() => {
         res.redirect('/');

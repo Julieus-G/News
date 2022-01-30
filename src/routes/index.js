@@ -4,10 +4,6 @@ var axios = require("axios").default;
 const request = require("request");
 const { getAuth, onAuthStateChanged } = require("firebase/auth");
 
-
-
-
-
 let quote = "";
 let quoteAuthor = "";
 
@@ -78,7 +74,7 @@ newsRouter.get("", (req, res) => {
       let tenthLink = response.data.articles[9].link;
 
 
-      // SUbsection - divone- content
+      // Subsection - divone- content
 
       let fourthSummary = response.data.articles[10].summary;
       let eleventhLink = response.data.articles[10].link;
