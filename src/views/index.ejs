@@ -114,28 +114,9 @@
       </div>
 
       <br />
-      <!-- <br />
+      <br />
       <br />
       <div class="inner">
-      <h3 class="breaking">Breaking news</h3>
-      <div class="inner">
-        <h3 class="breaking">Breaking news</h3>
-        <div class="breaking-articles">
-          <p>
-            Many people Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Esse
-          </p>
-          <p>
-            Many people Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Esse
-          </p>
-          <p>
-            Many people Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Esse
-          </p>
-        </div>
-      </div>
-      </div> -->
       </div>
     </div>
     <div class="minordiv">
@@ -143,37 +124,37 @@
         <%= firstTitle %>
         <a class="links" href="<%-fourthLink%>">Read more</a>
       </p>
-    </br>
+    <br>
       <p>
         <%= secondTitle %>
         <a class="links" href="<%-fifthLink%>">Read more</a>
       </p>
-    </br>
+    <br>
           <p>
         <%= thirdTitle %>
         <a class="links" href="<%-sixthLink%>">Read more</a>
       </p>
-    </br>
+    <br>
           <p>
         <%= fourthTitle %>
         <a class="links" href="<%-seventhLink%>">Read more</a>
       </p>
-    </br>
+    <br>
           <p>
         <%= fifthTitle %>
         <a class="links" href="<%-eighthLink%>">Read more</a>
       </p>
-    </br>
+    <br>
           <p>
         <%= sixthTitle %>
         <a class="links" href="<%-ninthLink%>">Read more</a>
       </p>
-    </br>
+    <br>
           <p>
         <%= seventhTitle %>
         <a class="links" href="<%-tenthLink%>">Read more</a>
       </p>
-    </br>
+    <br>
     </div>
   </section>
 </div>
@@ -182,33 +163,58 @@
 
 <div class="subsection">
   <div class="divone">
-    <p class="content">
+    <div class="contents">
       <h4><i class="fas fa-circle circle"></i>Hot topic</h4>
-      <%= fourthSummary %>
-      <a class="links" href="<%-eleventhLink%>">Read more</a>
-    </p>
-    <p class="content">
+      <% if (fourthSummary.length > 325) { %>
+        <%=fourthSummary.substring(0, 325)%> ...
+          <a class="links" href="<%-eleventhLink%>">Read more</a>
+            <%} else { %>
+        <%= fourthSummary %>...
+          <a class="links" href="<%-eleventhLink%>">Read more</a>
+      <% } %>
+    </div>
+    <div class="contents">
       <h4><i class="fas fa-circle circle"></i>Hot topic</h4>
-      <%= fifthSummary %>
-      <a class="links" href="<%-twelfthLink%>">Read more</a>
-    </p>
-    <p class="content">
+      <% if (fifthSummary.length > 325) { %>
+        <%=fifthSummary.substring(0, 325)%> ...
+          <a class="links" href="<%-twelfthLink%>">Read more</a>
+            <%} else { %>
+        <%= fifthSummary %>...
+          <a class="links" href="<%-twelfthLink%>">Read more</a>
+      <% } %>
+    </div>
+    <div class="contents">
       <h4><i class="fas fa-circle circle"></i>Hot topic</h4>
-      <%= sixthSummary %>
-      <a class="links" href="<%-thirteenthLink%>">Read more</a>
-    </p>
-    <p class="content">
-      <h4><i class="fas fa-circle circle"></i> Hot topic</h4>
-      <%= seventhSummary %>
-      <a class="links" href="<%-fourteenthLink%>">Read more</a>
-    </p>
-    <p class="content">
-      <h4><i class="fas fa-circle circle"></i> Hot topic</h4>
-      <%= eighthSummary %>
-      <a class="links" href="<%-fifteenthLink%>">Read more</a>
-    </p>
+      <% if (sixthSummary.length > 325) { %>
+        <%=sixthSummary.substring(0, 325)%> ...
+          <a class="links" href="<%-thirteenthLink%>">Read more</a>
+            <%} else { %>
+        <%= sixthSummary %>...
+          <a class="links" href="<%-thirteenthLink%>">Read more</a>
+      <% } %>
+    </div>
+    <div class="contents">
+      <h4><i class="fas fa-circle circle"></i>Hot topic</h4>
+      <% if (seventhSummary.length > 325) { %>
+        <%=seventhSummary.substring(0, 325)%> ...
+          <a class="links" href="<%-fourteenthLink%>">Read more</a>
+            <%} else { %>
+        <%= seventhSummary %>...
+          <a class="links" href="<%-fourteenthLink%>">Read more</a>
+      <% } %>
+    </div>
+    <div class="contents">
+      <h4><i class="fas fa-circle circle"></i>Hot topic</h4>
+      <% if (eighthSummary.length > 325) { %>
+        <%=eighthSummary.substring(0, 325)%> ...
+          <a class="links" href="<%-fifteenthLink%>">Read more</a>
+            <%} else { %>
+        <%= eighthSummary %>...
+          <a class="links" href="<%-fifteenthLink%>">Read more</a>
+      <% } %>
+      </div>
   </div>
-  <div class="divtwo" style="background: url('<%- firstMedia %>'); background-repeat: no-repeat; background-size: 100% 100%; opacity: 0.5">
+  <div class="divtwo" style="background: url('<%- firstMedia %>'); background-repeat: no-repeat; background-size: 100% 100%;">
     <h2 style="padding-left: 30px; padding-top: 50px;"><%= country %></h2>
     <div class="divtwo-p">
       <p>
@@ -226,43 +232,63 @@
       </ul>
     </div>
     <div class="content-image content">
-      <img src="https://source.unsplash.com/random/81x80" alt="" />
-
+      <img src="<%- secondMedia %>" alt="" style="height: auto; width: auto" />
       <p>
-        <%= tenthSummary %>
+        <% if (tenthSummary.length > 200) { %>
+        <%= tenthSummary.substring(0, 200)%> ...
         <a class="links" href="<%-sixteenthLink%>">Read more</a>
+      <%} else { %>
+        <%= tenthSummary %> ...
+        <a class="links" href="<%-sixteenthLink%>">Read more</a>
+      <% } %>
       </p>
     </div>
     <div class="content-image content">
-      <img src="https://source.unsplash.com/random/80x81" alt="" />
-
+      <img src="<%- thirdMedia %>" alt="" style="height: 80%; width: auto" />
       <p>
-        <%= eleventhSummary %>
+        <% if (tenthSummary.length > 200) { %>
+        <%= eleventhSummary.substring(0, 200)%> ...
         <a class="links" href="<%-seventeenthLink%>">Read more</a>
+      <%} else { %>
+        <%= eleventhSummary %> ...
+        <a class="links" href="<%-seventeenthLink%>">Read more</a>
+      <% } %>
       </p>
     </div>
     <div class="content-image content">
-      <img src="https://source.unsplash.com/random/79x80" alt="" />
-
+      <img src="<%- fourthMedia %>" alt="" style="height: 80%; width: auto" />
       <p>
-        <%= twelfthSummary %>
+        <% if (twelfthSummary.length > 200) { %>
+        <%= twelfthSummary.substring(0, 200)%> ...
         <a class="links" href="<%-eighteenthLink%>">Read more</a>
+      <%} else { %>
+        <%= twelfthSummary %> ...
+        <a class="links" href="<%-eighteenthLink%>">Read more</a>
+      <% } %>
       </p>
     </div>
     <div class="content-image content">
-      <img src="https://source.unsplash.com/random/80x79" alt="" />
-
+      <img src="<%- fifthMedia %>" alt="" style="height: 80%; width: auto" />
       <p>
-        <%= thirteenthSummary %>
+        <% if (thirteenthSummary.length > 200) { %>
+        <%= thirteenthSummary.substring(0, 200)%> ...
         <a class="links" href="<%-ninteenthLink%>">Read more</a>
+      <%} else { %>
+        <%= thirteenthSummary %> ...
+        <a class="links" href="<%-ninteenthLink%>">Read more</a>
+      <% } %>
       </p>
     </div>
     <div class="content-image content">
-      <img src="https://source.unsplash.com/random/80x79" alt="" />
-
+      <img src="<%- sixthMedia %>" alt="" style="height: 80%; width: auto" />
       <p>
-        <%= fourteenthSummary %>
+        <% if (fourteenthSummary.length > 200) { %>
+        <%= fourteenthSummary.substring(0, 200)%> ...
         <a class="links" href="<%-twentiethLink%>">Read more</a>
+      <%} else { %>
+        <%= fourteenthSummary %> ...
+        <a class="links" href="<%-twentiethLink%>">Read more</a>
+      <% } %>
       </p>
     </div>
   </div>
@@ -301,22 +327,6 @@
     <div class="minordiv2">
       <h3 class="content" style="font-size: 12px">LONG STORY SHORT</h3>
       <ul class="content">
-        <!-- <li>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-            magnam molestiae aliquam suscipit cupiditate amet repudiandae,
-            facere earum omnis voluptatibus.
-          </p>
-        </li>
-        <br />
-        <li>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus
-            magnam molestiae aliquam suscipit cupiditate amet repudiandae,
-            facere earum omnis voluptatibus.
-          </p>
-        </li> -->
-        <br />
         <li style="margin-bottom: 1rem">
           <p>
             <%= sixteenthSummary %>

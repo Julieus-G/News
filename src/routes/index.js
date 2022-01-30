@@ -88,17 +88,22 @@ newsRouter.get("", (req, res) => {
 
       let tenthSummary = response.data.articles[17].summary;
       let sixteenthLink = response.data.articles[17].link;
+      let secondMedia = response.data.articles[17].media;
       let eleventhSummary = response.data.articles[18].summary;
       let seventeenthLink = response.data.articles[18].link;
+      let thirdMedia = response.data.articles[18].media;
       let twelfthSummary = response.data.articles[19].summary;
       let eighteenthLink = response.data.articles[19].link;
+      let fourthMedia = response.data.articles[19].media;
       let thirteenthSummary = response.data.articles[20].summary;
       let ninteenthLink = response.data.articles[20].link;
+      let fifthMedia = response.data.articles[20].media;
       let fourteenthSummary = response.data.articles[21].summary;
       let twentiethLink = response.data.articles[21].link;
-
+      let sixthMedia = response.data.articles[21].media;
 
 ///
+      
       
       let fifteenthSummary = response.data.articles[22].summary;
       let twentyfirstLink = response.data.articles[22].link;
@@ -113,7 +118,7 @@ newsRouter.get("", (req, res) => {
       //Rendering the home page
 
       res.render("index", {
-        firstSummary, firstLink, secondSummary, secondLink, thirdSummary, thirdLink, firstTitle, fourthLink, secondTitle, fifthLink, thirdTitle, sixthLink, fourthTitle, seventhLink, fifthTitle, eighthLink, sixthTitle, ninthLink, seventhTitle, tenthLink, fourthSummary, eleventhLink, fifthSummary,  twelfthLink, sixthSummary, thirteenthLink, seventhSummary, fourteenthLink,  eighthSummary, fifteenthLink, country,firstMedia, ninthSummary, tenthSummary, sixteenthLink,  eleventhSummary, seventeenthLink, twelfthSummary, eighteenthLink, thirteenthSummary, ninteenthLink, fourteenthSummary, twentiethLink, quote, quoteAuthor, fifteenthSummary, twentyfirstLink, firstTopic, sixteenthSummary, twentysecondLink
+        firstSummary, firstLink, secondSummary, secondLink, thirdSummary, thirdLink, firstTitle, fourthLink, secondTitle, fifthLink, thirdTitle, sixthLink, fourthTitle, seventhLink, fifthTitle, eighthLink, sixthTitle, ninthLink, seventhTitle, tenthLink, fourthSummary, eleventhLink, fifthSummary,  twelfthLink, sixthSummary, thirteenthLink, seventhSummary, fourteenthLink,  eighthSummary, fifteenthLink, country,firstMedia, ninthSummary, tenthSummary, sixteenthLink, secondMedia, eleventhSummary, seventeenthLink, thirdMedia, twelfthSummary, eighteenthLink, fourthMedia, thirteenthSummary, ninteenthLink, fifthMedia, fourteenthSummary, twentiethLink, sixthMedia, quote, quoteAuthor, fifteenthSummary, twentyfirstLink, firstTopic, sixteenthSummary, twentysecondLink
       });
     })
 
