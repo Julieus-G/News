@@ -2,6 +2,12 @@ const express = require("express");
 const newsRouter = express.Router();
 var axios = require("axios").default;
 const request = require("request");
+const { getAuth, onAuthStateChanged } = require("firebase/auth");
+
+
+
+
+
 let quote = "";
 let quoteAuthor = "";
 
@@ -15,13 +21,19 @@ function fetchQuote() {
 }
 
 newsRouter.get("", (req, res) => {
-
-
+  const auth = getAuth();
+  var useruid = "";
+  onAuthStateChanged(auth, (user) => {
+    if (user) {
+      // User is signed in, see docs for a list of available properties
+      // https://firebase.google.com/docs/reference/js/firebase.User
+      useruid = user.uid;
+      // ...
+    } else {
+      useruid = ""
+    }
+  });
   // setting request 'options' parameter
-
-  ///////////////////////////////
-
-
   var options = {
     method: 'GET',
     url: 'https://api.newscatcherapi.com/v2/latest_headlines',
@@ -102,9 +114,9 @@ newsRouter.get("", (req, res) => {
       let twentiethLink = response.data.articles[21].link;
       let sixthMedia = response.data.articles[21].media;
 
-///
-      
-      
+      ///
+
+
       let fifteenthSummary = response.data.articles[22].summary;
       let twentyfirstLink = response.data.articles[22].link;
       let firstTopic = response.data.articles[22].topic;
@@ -118,7 +130,7 @@ newsRouter.get("", (req, res) => {
       //Rendering the home page
 
       res.render("index", {
-        firstSummary, firstLink, secondSummary, secondLink, thirdSummary, thirdLink, firstTitle, fourthLink, secondTitle, fifthLink, thirdTitle, sixthLink, fourthTitle, seventhLink, fifthTitle, eighthLink, sixthTitle, ninthLink, seventhTitle, tenthLink, fourthSummary, eleventhLink, fifthSummary,  twelfthLink, sixthSummary, thirteenthLink, seventhSummary, fourteenthLink,  eighthSummary, fifteenthLink, country,firstMedia, ninthSummary, tenthSummary, sixteenthLink, secondMedia, eleventhSummary, seventeenthLink, thirdMedia, twelfthSummary, eighteenthLink, fourthMedia, thirteenthSummary, ninteenthLink, fifthMedia, fourteenthSummary, twentiethLink, sixthMedia, quote, quoteAuthor, fifteenthSummary, twentyfirstLink, firstTopic, sixteenthSummary, twentysecondLink
+        firstSummary, firstLink, secondSummary, secondLink, thirdSummary, thirdLink, firstTitle, fourthLink, secondTitle, fifthLink, thirdTitle, sixthLink, fourthTitle, seventhLink, fifthTitle, eighthLink, sixthTitle, ninthLink, seventhTitle, tenthLink, fourthSummary, eleventhLink, fifthSummary, twelfthLink, sixthSummary, thirteenthLink, seventhSummary, fourteenthLink, eighthSummary, fifteenthLink, country, firstMedia, ninthSummary, tenthSummary, sixteenthLink, secondMedia, eleventhSummary, seventeenthLink, thirdMedia, twelfthSummary, eighteenthLink, fourthMedia, thirteenthSummary, ninteenthLink, fifthMedia, fourteenthSummary, twentiethLink, sixthMedia, quote, quoteAuthor, fifteenthSummary, twentyfirstLink, firstTopic, sixteenthSummary, twentysecondLink, useruid
       });
     })
 

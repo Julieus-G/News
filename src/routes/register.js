@@ -2,6 +2,7 @@ const express = require('express');
 const registerRouter = express.Router();
 // const {} = require("../firebase/firebase.util")
 const { getAuth, createUserWithEmailAndPassword } = require("firebase/auth");
+const { getCurrentUser } = require('../firebase/firebase.util');
 
 
 
@@ -13,24 +14,8 @@ registerRouter.get('', (req, res) => {
 });
 registerRouter.post('', (req, res) => {
     const { email, password, passwordConfirm } = req.body;
-    if (!email && !password) {
-        res.render('register', {
-            error: "Please enter email and password",
-            display: "block"
-        });
-    } else if (!email) {
-        res.render('register', {
-            error: "Please enter email",
-            display: "block"
-        });
-    }
-    else if (!password) {
-        res.render('register', {
-            error: "Please enter password",
-            display: "block"
-        });
-    }
-    else if (password !== passwordConfirm) {
+   
+     if (password !== passwordConfirm) {
         res.render('register', {
             error: "Password does not match",
             display: "block"
@@ -39,9 +24,9 @@ registerRouter.post('', (req, res) => {
     else {
         const auth = getAuth();
 
-        createUserWithEmailAndPassword(auth,email, password)
+        createUserWithEmailAndPassword(auth, email, password)
             .then(() => {
-                res.send("Successfully registered");
+                res.redirect("/")
             })
             .catch(err => {
                 res.render('register', {
