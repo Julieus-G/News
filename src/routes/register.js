@@ -26,7 +26,7 @@ registerRouter.post('', (req, res) => {
 
         createUserWithEmailAndPassword(auth, email, password)
             .then(() => {
-                res.redirect("/")
+                res.redirect("/login_landing")
             })
             .catch(err => {
                 res.render('register', {

@@ -59,12 +59,11 @@
 <div class="newz">
   <%contents.forEach(function(article, index){%>
   <a href="<%=article.link%>" class="newscard" id="card<%=index%>">
-    
     <img src="<%-article.media%>" alt="" />
     <h4><%=article.title%></h4>
     <% if (article.summary.length > 200) {%>
     <h5>read more</h5>
-    <button class="likes"><i class="far fa-star"></i></button>
+    <!-- <button class="likes"><i class="far fa-star"></i></button> -->
     <%} else {%>
     <p><%=article.summary%></p>
     <h5 style="color: #43adab">Read more</h5>

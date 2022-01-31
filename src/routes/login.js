@@ -19,7 +19,7 @@ loginRouter.post("", (req, res) => {
     // console.log(email, password);
     const auth = getAuth();
     signInWithEmailAndPassword(auth, email, password).then(() => {
-        res.redirect('/');
+        res.redirect('/login_landing');
     }).catch(err => {
         res.render('login', {
             error: err.message,

@@ -55,7 +55,7 @@ const loginRouter = require("./src/routes/login");
 const registerRouter = require("./src/routes/register");
 const signOutRouter = require("./src/routes/signout");
 
-app.use("/", newsRouter);
+app.use('/login_landing', newsRouter);
 app.use('/business', businessNews);
 app.use('/politics', politicsNews);
 app.use('/technology', technologyNews);
@@ -68,7 +68,7 @@ app.use('/science', scienceNews);
 app.use('/sport', sportNews);
 app.use('/travel', travelNews);
 app.use('/world', worldNews);
-app.use('/login', loginRouter);
+app.use('/', loginRouter);
 app.use("/register", registerRouter);
 app.use("/signout", signOutRouter);
 // Search functionality in the business.ejs page
@@ -103,7 +103,7 @@ app.route('/pages')
 
 
 
-app.get("/login", (req, res) => {
+app.get("/", (req, res) => {
   res.render("login");
 });
 
