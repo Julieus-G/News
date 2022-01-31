@@ -284,14 +284,6 @@ nav .menu {
   transform: rotate(45deg);
 }
 
-/* .active{
-  visibility: visible;
-  opacity: 1;
-}
-.passive{
-  visibility: hidden;
-  opacity: 0;
-} */
 .credentials:hover .drop {
   visibility: visible;
   opacity: 1;
@@ -302,14 +294,16 @@ nav .menu {
   justify-content: space-evenly;
 }
 
+.likes{
+  position: absolute;
+  border: none;
+  background-color: none;
+}
+
+
+
 @media (max-width: 1000px) {
 
-  /* body {
-    background: url("./images/flipboard-9-QUC4fm8Lo-unsplash(1).jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-  } */
   .search-box button {
     position: absolute;
   }
@@ -341,12 +335,6 @@ nav .menu {
 
 @media (max-width: 600px) {
 
-  /* body {
-    background: url("./images/flipboard-9-QUC4fm8Lo-unsplash(3).jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-  } */
   nav .logo {
     font-size: 10px;
     margin-left: 8px;

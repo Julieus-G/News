@@ -26,7 +26,13 @@
   padding: 0.7rem;
   color: var(--dark);
   width: auto;
+  position: relative;
 }
+
+.newscard::after{
+  /* content: "<button><i class="far fa-star"></i></button>"; */
+}
+
 .newscard:hover {
   box-shadow: var(--shadow);
 }
